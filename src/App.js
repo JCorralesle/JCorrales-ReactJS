@@ -1,24 +1,36 @@
-import logo from './logo.svg';
+
 import './App.css';
+import NavBar from './components/NavBar';
 
 function App() {
+
+  const temp = 20;
+
+  const spanStyles = {
+    fontSize: 24,
+    margin: 12
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Coderhouse - Julio Corrales
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Julio Corrales
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar/>
+      <div className="container">
+      <button 
+      style={{
+        width: 200,
+        borderRadius: 10,
+        backgroundColor: 'green'
+      }}
+      >Presiones aqui</button>
+      {/*Elementos autocloseables*/}
+      <input className="app-input"  placeholder = "Ingrese su edad"/>
+      <hr/>
+      <img className="imagen" src="https://t2.rg.ltmcdn.com/es/posts/2/4/2/capuchino_16242_600.jpg" alt="Capuchino" />
+      <hr/>
+      <img className="imagen" src={'/assets/3.jpg'} alt="Dulce Casa"/>
+      <span style={spanStyles} >Valor de la variable tempreatura es: {temp} </span>
+      </div> 
+    </>
   );
 }
 
