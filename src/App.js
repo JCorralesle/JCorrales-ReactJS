@@ -6,6 +6,7 @@ import ItemListContainer from './Container/ItemListContainer';
 function App() {
 
   const temp = 20;
+  const opcion = "Decoracion"
 
   const spanStyles = {
     fontSize: 24,
