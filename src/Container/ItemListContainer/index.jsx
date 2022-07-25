@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from "react";
 import ItemCount from '../../Components/ItemCount'
 import ItemList from '../../Components/ItemList'
 import { productosRaw } from '../../mocks/productos'
@@ -10,7 +10,7 @@ const ItemListContainer = ({greeting} ) => {
   const traerProductos = new Promise ((accept, reject ) => {
     setTimeout (() => {
       accept (productosRaw)
-    }, 3000)
+    })
   })
 
   traerProductos
