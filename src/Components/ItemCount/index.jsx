@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+
+
 const ItemCount = ({stock}) => {
     const [quantity, SetQuantity] = useState(1)
 
@@ -19,6 +21,13 @@ const ItemCount = ({stock}) => {
         alert(`Se agregan ${quantity} productos al carrito`);
     }
 
+
+
+
+
+
+
+
     return (
         <div>
             <button onClick={agregarCantidad}> + </button> 
@@ -28,6 +37,9 @@ const ItemCount = ({stock}) => {
             <button onClick={handleAddCart} > Agregar al Carrito </button>
         </div>
     )
+
+
+    
 }
 
 export default ItemCount
