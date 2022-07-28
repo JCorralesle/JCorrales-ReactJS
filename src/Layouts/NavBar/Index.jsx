@@ -4,6 +4,7 @@ import './NavBar.css';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import { Outlet, Link } from 'react-router-dom';
 
+const imagenConstruccion = require.context('../../images/logo');
 
 
 export default function NavBar(){
@@ -11,7 +12,8 @@ export default function NavBar(){
     <>
      <Navbar className="NavBarBG" collapseOnSelect expand="lg" variant="dark">
       <Container>
-        <Navbar.Brand as={Link} to="/" >Dulce Casa</Navbar.Brand>
+        <img src={imagenConstruccion(`./3.jpg`)} alt="Logo Dulce Casa" className='logoDulce' />
+        <Navbar.Brand as={Link} to="/" > Dulce Casa </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

@@ -257,7 +257,127 @@ export const productosRaw = [
         name : "Cachitos por ciento",
         imagen : require("../images/productos/3.jpg"),
         stock : 10,
+        category : "Dulce",
+
+    },
+
+    {
+        precio : 70.00,
+        id : 27,
+        name : "Hot dog picante por ciento",
+        imagen : require("../images/productos/3.jpg"),
+        stock : 10,
+        category : "Salado",
+
+    },
+
+    {
+        precio : 75.00,
+        id : 28,
+        name : "Wantanes por ciento",
+        imagen : require("../images/productos/3.jpg"),
+        stock : 10,
+        category : "Salado",
+
+    },
+
+    {
+        precio : 70.00,
+        id : 29,
+        name : "Bolitas de causa por ciento",
+        imagen : require("../images/productos/3.jpg"),
+        stock : 10,
+        category : "Salado",
+
+    },
+
+    {
+        precio : 70.00,
+        id : 30,
+        name : "Taqueños por ciento",
+        imagen : require("../images/productos/3.jpg"),
+        stock : 10,
+        category : "Salado",
+
+    },
+
+    {
+        precio : 75.00,
+        id : 31,
+        name : "Enrollados de hot dog por ciento",
+        imagen : require("../images/productos/3.jpg"),
+        stock : 10,
+        category : "Salado",
+
+    },
+
+    {
+        precio : 95.00,
+        id : 32,
+        name : "Petipan de pollo por ciento",
+        imagen : require("../images/productos/3.jpg"),
+        stock : 10,
+        category : "Salado",
+
+    },
+
+    {
+        precio : 125.00,
+        id : 33,
+        name : "Doble de jamón y queso por ciento",
+        imagen : require("../images/productos/3.jpg"),
+        stock : 10,
+        category : "Salado",
+
+    },
+
+    {
+        precio : 130.00,
+        id : 34,
+        name : "Doble de pollo y durazno por ciento",
+        imagen : require("../images/productos/3.jpg"),
+        stock : 10,
+        category : "Salado",
+
+    },
+
+    {
+        precio : 135.00,
+        id : 35,
+        name : "Triple de jam&oacute;n, pollo y durazno por ciento",
+        imagen : require("../images/productos/3.jpg"),
+        stock : 10,
+        category : "Salado",
+
+    },
+
+    {
+        precio : 145.00,
+        id : 36,
+        name : "Triple de huevo, tomate y palta por ciento",
+        imagen : require("../images/productos/3.jpg"),
+        stock : 10,
+        category : "Salado",
+
+    },
+
+    {
+        precio : 155.00,
+        id : 37,
+        name : "Piernitas de pollo por ciento",
+        imagen : require("../images/productos/3.jpg"),
+        stock : 10,
         category : "Salado",
 
     }
+
+
+
+
+
+
+
+
+
+    
 ]

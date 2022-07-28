@@ -1,6 +1,7 @@
 import React, { useState, } from "react";
 import ItemList from '../../Components/ItemList';
 import { productosRaw } from '../../mocks/productos';
+import './ItemListContainerStyle.css'
 
 
 const ItemListContainer = ({greeting} ) => {
@@ -24,12 +25,9 @@ const ItemListContainer = ({greeting} ) => {
 
 
   return (
-    <div>
-        <h1> {greeting} </h1>
-        
-        <ItemList products={productos}/>
-        
-        
+    <div className="EstiloItemListContainer">
+        <h1>  {greeting} </h1>
+        <ItemList  products={productos}/>     
     </div>
 
     

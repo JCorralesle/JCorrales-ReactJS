@@ -1,0 +1,15 @@
+.EstiloContador{
+    background-color: rgb(206, 203, 203);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 15px;
+
+}
+
+.EstiloBotonItemCount {
+    margin: 5px ;
+    padding: 5px, 5px, 5px, 5px;
+}

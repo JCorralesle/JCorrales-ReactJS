@@ -1,3 +1,8 @@
+La aplicación busca crear un ecommerse de Dulces, se ha creado categorias para las páginas, se ha importado bootstrap para la implementacion de plantillas
+Se estan recien habilitando las paginas de inicio, contactacnos, nosotros las cuales te muestran un mensaje de sitio en construcccion
+
+Los productos se han movido a la pestana productos (dulces, salados, combos, etc) el Home 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

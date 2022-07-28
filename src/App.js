@@ -1,8 +1,6 @@
 
 import './App.css';
 import NavBar from './Layouts/NavBar/Index';
-import ItemDetailContainer from './Container/ItemDetailContainer';
-import ItemListContainer from './Container/ItemListContainer';
 import { BrowserRouter, Navigate } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,7 +23,7 @@ function App() {
       <NavBar/>
       <Routes>
         
-          <Route path='Inicio'element={<Inicio/>}/>
+          <Route path='/'element={<Inicio/>}/>
           <Route path='Box'element={<Box/>}/>
           <Route path='Combos'element={<Combos/>}/>
           <Route path='Contactanos'element={<Contactanos/>}/>
@@ -34,9 +32,6 @@ function App() {
           <Route path='Nosotros'element={<Nosotros/>}/>
           <Route path='Salados'element={<Salados/>}/>
           <Route path='Tortas'element={<Tortas/>}/>
-          <Route path='/' element={<ItemListContainer/>}/>
-          <Route path='/category/:id' element={<ItemListContainer/>}/>
-          <Route path='/Item/:id' element={<ItemDetailContainer/>}/>
           <Route path='*' element={ <Navigate replace to="/" /> }/>
 
       </Routes>      

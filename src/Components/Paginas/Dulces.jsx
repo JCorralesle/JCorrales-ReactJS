@@ -1,8 +1,12 @@
 import React from 'react'
+import ItemListContainer from '../../Container/ItemListContainer'
+
 
 const Dulces = () => {
   return (
-    <div>Dulces</div>
+    <div>
+      <ItemListContainer />
+    </div>
   )
 }
 
