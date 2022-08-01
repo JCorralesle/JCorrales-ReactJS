@@ -1,23 +1,32 @@
 import React from 'react'
+import ItemCount from '../ItemCount'
 
 
-const ItemDetail  = ({pokemonDetail}) => {
+const ItemDetail  = ({product}) => {
 
-    if(pokemonDetail !== null ){
+  product.stock = 10;
+  const [qtyAdded, setQtyAdded ] = useState(0);
+
+  const handleConfirm = (qty) => {
+    setQtyAdded(qty);
+  }
+    
+  const handleTerminate = () => {
+    navigate ('/cart')
+  }
+
       return (
         <div> 
-          <img src= {pokemonDetail.sprites.front_default} alt="Pokemon portada" />
-          <p> {pokemonDetail.name} </p>
-    
-        </div>
-      )
-
-    }
-
-    return (
-      <p>Loading...</p>
-    )
-
+          <hi> {product.name} </hi>
+          <p> {product.name} </p>
+          
+          {!qtyAdded ?
+            <ItemCount onConfirm={handleConfirm} maxQuantity={product.stock} />
+            :
+            <button onClick={handleTerminate} >Terminar Compra</button>
+          }
+        </div>)
+     
     
 }
 

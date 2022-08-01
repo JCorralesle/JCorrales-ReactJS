@@ -13,6 +13,7 @@ import Nosotros from './Components/Paginas/Nosotros';
 import Salados from './Components/Paginas/Salados';
 import Tortas from './Components/Paginas/Tortas';
 import Inicio from './Components/Paginas/Inicio';
+import Cart from './Container/Cart';
 
 
 
@@ -32,6 +33,7 @@ function App() {
           <Route path='Nosotros'element={<Nosotros/>}/>
           <Route path='Salados'element={<Salados/>}/>
           <Route path='Tortas'element={<Tortas/>}/>
+          <Route path='/cart' element={<Cart/>}/>
           <Route path='*' element={ <Navigate replace to="/" /> }/>
 
       </Routes>      
