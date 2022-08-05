@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState, navigate } from 'react'
 import ItemCount from '../ItemCount'
 
 
-const ItemDetail  = ({product}) => {
+const ItemDetail  = ({productos}) => {
 
-  product.stock = 10;
+  
   const [qtyAdded, setQtyAdded ] = useState(0);
 
   const handleConfirm = (qty) => {
@@ -15,17 +15,18 @@ const ItemDetail  = ({product}) => {
     navigate ('/cart')
   }
 
-      return (
-        <div> 
-          <hi> {product.name} </hi>
-          <p> {product.name} </p>
-          
-          {!qtyAdded ?
-            <ItemCount onConfirm={handleConfirm} maxQuantity={product.stock} />
-            :
-            <button onClick={handleTerminate} >Terminar Compra</button>
-          }
-        </div>)
+  return (
+    <div> 
+      
+      <hi> {productos.name} </hi>
+      <p> {productos.category} </p>
+      
+      {!qtyAdded ?
+        <ItemCount onConfirm={handleConfirm} maxQuantity={productos.stock} />
+        :
+        <button onClick={handleTerminate} >Terminar Compra</button>
+      }
+    </div>)
      
     
 }

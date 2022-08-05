@@ -5,8 +5,14 @@ import './ItemListStyle.css'
 const ItemList = ({products}) => {
   return (
     <div className='EstiloItemList' >
-       {products.map(producto => {
-        return <Item key={producto.id} producto={producto}/>
+       {products.map(producto=> {
+        return (
+          <Item 
+            key={producto.id} 
+            imagen={producto.imagen}
+            precio={producto.precio}
+            name={producto.name}
+            producto={producto}/>)
     })}
     </div>
   )
