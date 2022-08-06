@@ -1,9 +1,31 @@
-import React from 'react'
+import { useContext, useState } from 'react';
+import CartItem from './CartItem';
+import { CartContext } from '../../Components/Context';
+import { Link } from 'react-router-dom';
 
-const Cart = () => {
+function Cart () {
+
+  const { cart, clear } = useContext(CartContext);
+
+  const limpiarCarrito = () =>{
+    clear();
+  }
+
+  if(!cart.length) {
+    return (
+      <div>
+        <h2>No hay productos en el carrito</h2>
+        <Link to='/'>Volver a la tienda</Link>
+      </div>
+    )
+  }
+
   return (
-    <div>Cart</div>
-  )
-}
+    <div className="App">
+      <CartItem cart={cart}></CartItem>
+      <button onClick={limpiarCarrito}>Vaciar Carrito</button>
+    </div>
+  );
+ }
 
-export default Cart
+ export default Cart;

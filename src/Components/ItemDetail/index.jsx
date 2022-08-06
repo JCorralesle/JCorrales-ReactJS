@@ -1,31 +1,33 @@
-import React, { useState, navigate } from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount'
+import { CartContext } from '../Context'
+import { useContext } from 'react'
 
 
-const ItemDetail  = ({productos}) => {
+const ItemDetail  = ({product}) => {
 
-  
-  const [qtyAdded, setQtyAdded ] = useState(0);
+  const {addItem} = useContext(CartContext)
+  const [producto, setProducto] = useState({})
 
-  const handleConfirm = (qty) => {
-    setQtyAdded(qty);
+  const onAdd = (contador) => {
+    setProducto(product)
+    addItem(product, contador)
   }
-    
-  const handleTerminate = () => {
-    navigate ('/cart')
-  }
-
   return (
     <div> 
       
-      <hi> {productos.name} </hi>
-      <p> {productos.category} </p>
+      <h1> {product.name} </h1>
+      <img src={product.imagen} alt='No hay imagen'></img>
       
-      {!qtyAdded ?
-        <ItemCount onConfirm={handleConfirm} maxQuantity={productos.stock} />
-        :
-        <button onClick={handleTerminate} >Terminar Compra</button>
+      {
+        producto.id?
+        <div>
+          <Link to={'/cart'}><button>Finalizar Compra</button></Link>
+        </div>:
+        <ItemCount stock={product.stock} initial={1} onAdd={onAdd}></ItemCount> 
       }
+
     </div>)
      
     

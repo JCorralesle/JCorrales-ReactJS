@@ -7,51 +7,35 @@ import { productosRaw } from '../../mocks/productos';
 function ItemDetailContainer() {
 
   const [productos, setProductos] = useState([]);
-  const {itemId} = useParams ();
-  
-
-  useEffect (() => {
-
-  let detalleDulceCasa = true;
-  const traerProductosDulceCasa = (time, task) =>{
-   return new Promise((resolve, reject) => {
-    setTimeout(()=>{
-      if (detalleDulceCasa){ 
-      resolve (task)
-      }
-      else {reject("Error")}
-    }, time)
-   });
+  const {id} = useParams ();
+   
+  let flag = true;
+  const traerProductosDetalle = (time, task) => {
+    return new Promise ((resolve, reject) => {
+      setTimeout(() => {
+        if (flag){
+          resolve(task)
+        }
+        else {reject('Error')}
+      }, time)
+    })
   }
 
-    traerProductosDulceCasa( productosRaw.find (producto => producto.id === parseInt[itemId]))
-    .then(result => {
-      setProductos(result);
-    })
-    .catch(error => {
-      alert(`Hubo un error: ${error}`);
+  useEffect (()=> {
+    
+      
+      traerProductosDetalle(500, productosRaw.find (item => item.id === parseInt(id)))
+      .then((result) => {
+        setProductos(result)
+    }).catch(error => {
+      alert(`Hubo un error: ${error}`)
     });
-  },[itemId]);
-
-
-  //const [productos, setProductos] = useState([]);
-  //const {itemId} = useParams ();
-  //   console.log(itemId)
-  //const traerProductosDulceCasa = new Promise((accept, reject) => {
-  //  setTimeout(() => {
-  //    accept(productosRaw);
-  // });
-  //});
-  //traerProductosDulceCasa
-  //  .then(result => {
-  //  setProductos(result);
-  //  })
-  //  .catch(error => {
-  //    alert(`Hubo un error: ${error}`);
-  //  });
+    
+  },[id])
+  
 
   return (
-    <ItemDetail productos={productos} />
+    <ItemDetail product={productos} />
   );
 }
 

@@ -4,36 +4,44 @@ import { productosRaw } from '../../mocks/productos';
 import './ItemListContainerStyle.css';
 import { useParams } from "react-router-dom";
 
-const ItemListContainer = ( ) => {
+const ItemListContainer = ( {greeting} ) => {
 
 
   const [productos, setProductos] = useState ([])
-
   const{categoryId} = useParams();
 
-  useEffect (()=> {
-  
-  const traerProductos = new Promise ((accept, reject ) => {
-    setTimeout (() => {
-      accept (productosRaw)
+  let flag = true;
+  const traerProductos = (time, task) => {
+    return new Promise ((resolve, reject) => {
+      setTimeout(() => {
+        if (flag){
+          resolve(task)
+        }
+        else {reject('Error')}
+      }, time)
     })
-  })
+  }
 
-   
-  traerProductos 
-  .then(result => {
-    setProductos(result)
-  })
-  .catch(error => {
-    alert(`Hubo un error: ${error}`)
-  })
+  useEffect (() =>{ 
+    if(categoryId){
+      traerProductos(500, productosRaw)
+      .then((result) =>(
+      setProductos(result.filter(products => products.category === categoryId))
+      ))
+  }
+   else {
+    traerProductos(500, productosRaw)
+    .then((result) => {
+      setProductos(result)
+    })
+  }
+  }, [categoryId])
 
-},[categoryId])
 
 
   return (
     <div className="EstiloItemListContainer">
-        
+        <h1> {greeting} </h1>
         <ItemList  products={productos}/>     
     </div>
 
