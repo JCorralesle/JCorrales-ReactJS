@@ -1,43 +1,41 @@
-import React, {  useState, useEffect } from "react";
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 import ItemDetail from '../../Components/ItemDetail';
-import { useParams } from "react-router-dom";
-import { productosRaw } from '../../mocks/productos';
+import { doc, getDoc } from "firebase/firestore";
+import { database } from '../../firebase/config';
 
+const ItemDetailContainer = () => {
 
-function ItemDetailContainer() {
+    const [productoDetail, setProductoDetail] = useState(null);
 
-  const [productos, setProductos] = useState([]);
-  const {id} = useParams ();
-   
-  let flag = true;
-  const traerProductosDetalle = (time, task) => {
-    return new Promise ((resolve, reject) => {
-      setTimeout(() => {
-        if (flag){
-          resolve(task)
+    const {id} = useParams();
+
+    console.log(id);
+    
+    useEffect(() => {
+        const getProductoDetail = async () => {
+            try {
+                const docRef = doc(database, "products", id);
+                const docSnap = await getDoc(docRef);
+                
+                if (docSnap.exists()) {
+                  console.log(`Document data:, id:${docSnap.id} => data: ${JSON.stringify(docSnap.data())}`);
+                  setProductoDetail({id: docSnap.id, ...docSnap.data()})
+                } else {
+                  console.log("No such document!");
+                }
+
+            } catch (error) {
+                alert(`Hubo un error: ${error.message}`)
+            }
         }
-        else {reject('Error')}
-      }, time)
-    })
-  }
+        getProductoDetail();
 
-  useEffect (()=> {
-    
-      
-      traerProductosDetalle(500, productosRaw.find (item => item.id === parseInt(id)))
-      .then((result) => {
-        setProductos(result)
-    }).catch(error => {
-      alert(`Hubo un error: ${error}`)
-    });
-    
-  },[id])
-  
+    }, [id])
 
-  return (
-    <ItemDetail product={productos} />
-  );
+    return (
+        <ItemDetail productoDetail={productoDetail}/>
+    )
 }
-
 
 export default ItemDetailContainer

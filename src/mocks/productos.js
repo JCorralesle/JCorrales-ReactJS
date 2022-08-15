@@ -15,7 +15,7 @@ export const productosRaw = [
         id : 2,
         name :"Alfajores de maicena mediana por media docena",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 15,
         category : "Dulce",
 
     },
@@ -25,7 +25,7 @@ export const productosRaw = [
         id : 3,
         name : "Alfajores de maicena mediana por docena",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 21,
         category : "Dulce",
 
     },
@@ -35,7 +35,7 @@ export const productosRaw = [
         id : 4,
         name : "Alfajores de maicena grande por media docena",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 30,
         category : "Dulce",
 
     },
@@ -45,7 +45,7 @@ export const productosRaw = [
         id : 5,
         name : "Alfajores de maicena grande por docena",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 18,
         category : "Dulce",
 
     },
@@ -55,7 +55,7 @@ export const productosRaw = [
         id : 6,
         name : "Alfajores de maicena por ciento",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 40,
         category : "Dulce",
 
     },
@@ -65,7 +65,7 @@ export const productosRaw = [
         id : 7,
         name : "Alfajores de colores pequeño por docena",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 22,
         category : "Dulce",
 
     },
@@ -75,7 +75,7 @@ export const productosRaw = [
         id : 8,
         name : "Alfajores de colores mediano por media docena",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 33,
         category : "Dulce",
 
     },
@@ -85,7 +85,7 @@ export const productosRaw = [
         id : 9,
         name : "Alfajores de colores mediano por docena",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 11,
         category : "Dulce",
 
     },
@@ -95,7 +95,7 @@ export const productosRaw = [
         id : 10,
         name : "Alfajores de colores grande por media docena",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 8,
         category : "Dulce",
 
     },
@@ -105,7 +105,7 @@ export const productosRaw = [
         id : 11,
         name : "Alfajores de colores grande por docena",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 18,
         category : "Dulce",
 
     },
@@ -115,7 +115,7 @@ export const productosRaw = [
         id : 12,
         name : "Alfajores de pecanas pequeño por docena",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 19,
         category : "Dulce",
 
     },
@@ -125,7 +125,7 @@ export const productosRaw = [
         id : 13,
         name : "Alfajores de pecanas mediano por media docena",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 21,
         category : "Dulce",
 
     },
@@ -135,7 +135,7 @@ export const productosRaw = [
         id : 14,
         name : "Alfajores de pecanas mediano por docena",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 35,
         category : "Dulce",
 
     },
@@ -145,7 +145,7 @@ export const productosRaw = [
         id : 15,
         name : "Alfajores de pecanas grande por media docena",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 7,
         category : "Dulce",
 
     },
@@ -155,7 +155,7 @@ export const productosRaw = [
         id : 16,
         name : "Alfajores de pecanas grande por docena",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 12,
         category : "Dulce",
 
     },
@@ -165,7 +165,7 @@ export const productosRaw = [
         id : 17,
         name : "Empanadas de carne pequeño por docena",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 14,
         category : "Dulce",
 
     },
@@ -175,7 +175,7 @@ export const productosRaw = [
         id : 18,
         name : "Empanadas de carne mediano por docena",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 15,
         category : "Dulce",
 
     },
@@ -185,7 +185,7 @@ export const productosRaw = [
         id : 19,
         name : "Empanadas de carne grande por 03 unidades",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 1,
         category : "Dulce",
 
     },
@@ -195,7 +195,7 @@ export const productosRaw = [
         id : 20,
         name : "Empanadas de carne por ciento",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 42,
         category : "Dulce",
 
     },
@@ -205,7 +205,7 @@ export const productosRaw = [
         id : 21,
         name : "Brownies por 15 unidades",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 24,
         category : "Dulce",
 
     },
@@ -215,7 +215,7 @@ export const productosRaw = [
         id : 22,
         name : "Brownies por 25 unidades",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 41,
         category : "Dulce",
 
     },
@@ -225,7 +225,7 @@ export const productosRaw = [
         id : 23,
         name : "Brownies por ciento",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 13,
         category : "Dulce",
 
     },
@@ -236,7 +236,7 @@ export const productosRaw = [
         id : 24,
         name : "Pionono completo",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 12,
         category : "Dulce",
 
     },
@@ -256,7 +256,7 @@ export const productosRaw = [
         id : 26,
         name : "Cachitos por ciento",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 4,
         category : "Dulce",
 
     },
@@ -266,7 +266,7 @@ export const productosRaw = [
         id : 27,
         name : "Hot dog picante por ciento",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 22,
         category : "Salado",
 
     },
@@ -276,7 +276,7 @@ export const productosRaw = [
         id : 28,
         name : "Wantanes por ciento",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 40,
         category : "Salado",
 
     },
@@ -286,7 +286,7 @@ export const productosRaw = [
         id : 29,
         name : "Bolitas de causa por ciento",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 2,
         category : "Salado",
 
     },
@@ -296,7 +296,7 @@ export const productosRaw = [
         id : 30,
         name : "Taqueños por ciento",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 6,
         category : "Salado",
 
     },
@@ -306,7 +306,7 @@ export const productosRaw = [
         id : 31,
         name : "Enrollados de hot dog por ciento",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 7,
         category : "Salado",
 
     },
@@ -316,7 +316,7 @@ export const productosRaw = [
         id : 32,
         name : "Petipan de pollo por ciento",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 4,
         category : "Salado",
 
     },
@@ -326,7 +326,7 @@ export const productosRaw = [
         id : 33,
         name : "Doble de jamón y queso por ciento",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 23,
         category : "Salado",
 
     },
@@ -336,7 +336,7 @@ export const productosRaw = [
         id : 34,
         name : "Doble de pollo y durazno por ciento",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 11,
         category : "Salado",
 
     },
@@ -344,9 +344,9 @@ export const productosRaw = [
     {
         precio : 135.00,
         id : 35,
-        name : "Triple de jam&oacute;n, pollo y durazno por ciento",
+        name : "Triple de jamón, pollo y durazno por ciento",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 4,
         category : "Salado",
 
     },
@@ -356,7 +356,7 @@ export const productosRaw = [
         id : 36,
         name : "Triple de huevo, tomate y palta por ciento",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 3,
         category : "Salado",
 
     },
@@ -366,7 +366,7 @@ export const productosRaw = [
         id : 37,
         name : "Piernitas de pollo por ciento",
         imagen : require("../images/productos/3.jpg"),
-        stock : 10,
+        stock : 14,
         category : "Salado",
 
     }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import '../Item/ItemStyle.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Item = ({producto}) => {
 
@@ -21,7 +21,7 @@ const Item = ({producto}) => {
           <Card.Title> {producto.name} </Card.Title>
           <Card.Text> Precio: S/. {producto.precio} </Card.Text>
         </Card.Body>
-        <link to={`/detalle/${producto.id}`}><button> Más Información </button></link>
+        <Link to={`/detalle/${producto.id}`}><button> Más Información </button></Link>
       </Card>
 
     </div>
