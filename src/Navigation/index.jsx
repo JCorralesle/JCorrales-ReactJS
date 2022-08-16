@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from '../components/NavBar';
-import ItemDetailContainer from '../container/ItemDetailContainer';
-import ItemListContainer from '../container/ItemListContainer';
-import NotFound from '../components/NotFound';
-import CartContainer from '../container/CartContainer';
-import Checkout from '../components/Checkout';
+import NavBar from '../Layouts/NavBar';
+import ItemDetailContainer from '../Container/ItemDetailContainer';
+import ItemListContainer from '../Container/ItemListContainer';
+import NotFound from '../Components/NotFound';
+import CartContainer from '../Container/CartContainer';
+import Checkout from '../Components/Checkout';
 
 const MainNavigator = () => {
     return (

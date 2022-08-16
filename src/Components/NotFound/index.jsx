@@ -2,8 +2,15 @@ import React from 'react'
 
 const NotFound = () => {
   return (
-    <div>
-        <h2>Page Not Found ...</h2>
+    <div style={{
+        width: '100vw',
+        height: '90vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+    }}>
+        <h2>Page not found!</h2>
     </div>
   )
 }

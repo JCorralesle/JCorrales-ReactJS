@@ -1,31 +1,27 @@
-import React from 'react';
-import CartWidget from '../../Components/CartWidget';
-import './NavBar.css';
-import { Navbar, Container, Nav} from 'react-bootstrap';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ShopData } from '../../context/Shop';
+import CartWidget from '../../Components/CartWidget';
+import SelectDarkMode from '../../Components/SelectDarkMode';
+import './NavBar.css';
 
-const imagenConstruccion = require.context('../../images/logo');
+
+const logoDC = require.context('../../images/logo');
 
 
 export default function NavBar(){
- return (
-    <>
-     <Navbar className="NavBarBG" collapseOnSelect expand="lg" variant="dark">
-      <Container>
-        <img src={imagenConstruccion(`./3.jpg`)} alt="Logo Dulce Casa" className='logoDulce' />
-        <Navbar.Brand as={Link} to="/" > Dulce Casa </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="/" >Inicio</Nav.Link>
-            <Nav.Link as={Link} to="/category/Dulce">Dulces</Nav.Link>
-            <Nav.Link as={Link} to="/category/Salado">Salados</Nav.Link>
-          </Nav>
-          <CartWidget />
-        </Navbar.Collapse>
-      </Container>
-      </Navbar>
 
-    </>
+  const {darkMode} = useContext(ShopData);
+
+ return (
+
+        <ul style={{backgroundColor: darkMode ? '#333': 'beige'}}>
+            <li><Link to="/" style={{color: darkMode ? 'white': 'black'}}>Home</Link></li>
+            <li><Link to="/category/Dulce" style={{color: darkMode ? 'white': 'black'}}>Productos Dulces </Link></li>
+            <li><Link to="/category/Salado" style={{color: darkMode ? 'white': 'black'}}>Productos Salados </Link></li>
+            <CartWidget />
+            <SelectDarkMode/>
+        </ul>
+
  )
 }
