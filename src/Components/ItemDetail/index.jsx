@@ -25,7 +25,7 @@ const ItemDetail  = ({productoDetail}) => {
     if (productoDetail !== null) {
         return (
             <div className='container'>
-                <img src={productoDetail.sprites.front_default} alt="portada-pokemon" width='300px' />
+                
                 <div className='texts'>
                     <h3>{productoDetail.name}</h3>
                     <p>Tipo: {productoDetail.types[0].type.name}</p>
@@ -40,7 +40,7 @@ const ItemDetail  = ({productoDetail}) => {
         )
     }
     return (
-        <p>Loading...</p>
+        <p>Loading page</p>
     )
 }
 

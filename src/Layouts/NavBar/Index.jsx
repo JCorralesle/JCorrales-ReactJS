@@ -5,10 +5,6 @@ import CartWidget from '../../Components/CartWidget';
 import SelectDarkMode from '../../Components/SelectDarkMode';
 import './NavBar.css';
 
-
-const logoDC = require.context('../../images/logo');
-
-
 export default function NavBar(){
 
   const {darkMode} = useContext(ShopData);

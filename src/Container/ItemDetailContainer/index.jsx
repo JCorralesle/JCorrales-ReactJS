@@ -8,14 +8,14 @@ const ItemDetailContainer = () => {
 
     const [productoDetail, setProductoDetail] = useState(null);
 
-    const {id} = useParams();
+    const {itemId} = useParams();
 
-    console.log(id);
+    console.log(itemId);
     
     useEffect(() => {
         const getProductoDetail = async () => {
             try {
-                const docRef = doc(database, "products", id);
+                const docRef = doc(database, "productos", itemId);
                 const docSnap = await getDoc(docRef);
                 
                 if (docSnap.exists()) {
@@ -31,7 +31,7 @@ const ItemDetailContainer = () => {
         }
         getProductoDetail();
 
-    }, [id])
+    }, [itemId])
 
     return (
         <ItemDetail productoDetail={productoDetail}/>
